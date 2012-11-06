@@ -1,0 +1,8 @@
+" text tab rendering fix weird ubuntu glitches
+set guioptions=agim
+" remove toolbar
+set guioptions-=T
+" remove menubar
+set guioptions-=m
+
+colorscheme wombat
