@@ -52,7 +52,8 @@ let g:tagbar_autofocus = 1
 "let g:neocomplcache_disable_auto_complete = 1
 "let g:neocomplcache_enable_camel_case_completion = 1
 
-source ~/.vim/settings/neocomset.vim
+"source ~/.vim/settings/neocomset.vim
+"source ~/.vim/settings/omnicppset.vim
 
 " Recommended key-mappings.
 " " <CR>: close popup and save indent.
@@ -92,7 +93,7 @@ nmap <leader>t :TagbarToggle<CR>
 
 " -- ctags --
 " add current directory's generated tags file to available tags
-set tags=./tags,tags,~/.vim/cpp_src/cpp
+set tags=./tags,~/.vim/cpp_src/cpp
 "'''''''''''''
 
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
@@ -108,7 +109,7 @@ command! -range=% -nargs=0 Tab2Space execute '<line1>,<line2>s#^\t\+#\=repeat(" 
 command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)\+#\=repeat("\t", len(submatch(0))/' . &ts . ')'
 
 " map <ctrl>+F12 to generate ctags for current folder:
-map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ .<CR><CR>
+map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
 
 " remove windows M newline chars
 map <c-F7> :%s/\r\(\n\)/\1/g<CR>
@@ -118,3 +119,4 @@ map <C-F8> :Space2Tab<CR>
 map <C-F9> :%s/\s\+$//<CR>
 " delete all double spaces - assumes 4 space tabs
 map <C-F6> :%s/\t/    /g<CR>:Space2Tab<CR>:%s/ \{2,}/ /g<CR>
+
