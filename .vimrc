@@ -45,13 +45,10 @@ nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
 "Auto load session if Session.vim exists.
 silent! source Session.vim
 
-let g:tagbar_autofocus = 1
-
 "source ~/.vim/settings/neocomset.vim
-"source ~/.vim/settings/omnicppset.vim
+source ~/.vim/settings/omnicppset.vim
 
-nmap <leader>t :TagbarToggle<CR>
-"nmap <silent> <leader>t :Tlist<CR>
+nmap <leader>t :TagbarOpenAutoClose<CR>
 
 " only needed for windows
 "set bs=2
@@ -77,8 +74,6 @@ nmap <leader>t :TagbarToggle<CR>
 
 " Show spaces used for indenting (so you use only tabs for indenting).
 "match ExtraWhitespace /^\t*\zs \+/
-
-"set omnifunc=syntaxcomplete#Complete
 
 " -- ctags --
 " add current directory's generated tags file to available tags
